@@ -6,20 +6,17 @@
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
         # Three Pointer Approach (Iteratively)
-        # if not head or not head.next:
-        #     return head
-        # p = head
-        # c = head.next
-        # n = head.next.next
-        
-        # p.next = None
-        # while n:
-        #     c.next = p
-        #     p = c
-        #     c = n
-        #     n = n.next
-        # c.next = p
-        # return c
+        # def reverse(head):
+            # if not head or not head.next:
+            #     return head
+            # p, c, n = head, head.next, head.next.next
+            
+            # p.next = None
+            # while n:
+            #     c.next = p
+            #     p , c, n = c , n, n.next
+            # c.next = p
+            # return c
 
         # Recursive Approach
         if not head or not head.next:

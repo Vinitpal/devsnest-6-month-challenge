@@ -1,16 +1,18 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 def getWidth(root, rootlevel, rootIndex, widthMap):
     if root:
         if rootlevel not in widthMap:
             widthMap[rootlevel] = [rootIndex, rootIndex]
+
         elif rootIndex < widthMap[rootlevel][0]:
             widthMap[rootlevel][0] = rootIndex
+        
         elif rootIndex > widthMap[rootlevel][1]:
             widthMap[rootlevel][1] = rootIndex
             
